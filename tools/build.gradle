@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/groups/public/' }
+}
+
+dependencies {
+
+    compile 'org.ccil.cowan.tagsoup:tagsoup:1.2',
+            'commons-cli:commons-cli:1.2',
+            'org.codehaus.groovy:groovy-xml:2.0.6',
+            'org.eclipse.jgit:org.eclipse.jgit:2.0.0.201206130900-r',
+            'org.eclipse.jgit:org.eclipse.jgit.ui:2.0.0.201206130900-r'
+
+    testCompile 'junit:junit:4.11'
+
+    groovy 'org.codehaus.groovy:groovy:2.0.6'
+}

@@ -1,0 +1,28 @@
+Targeting Challenge RM
+
+PERCENT_SCORE
+35 rounds
+
+Easy {
+  apv.AspidMovement_1.0
+  dummy.micro.Sparrow_2.5TC
+  kawigi.mini.Fhqwhgads_1.1TC
+  emp.Yngwie_1.0
+  kawigi.sbf.FloodMini_1.4TC
+}
+
+Medium {
+  abc.Tron_2.01
+  wiki.etc.HTTC_1.0
+  wiki.etc.RandomMovementBot_1.0
+  davidalves.micro.DuelistMicro_2.0TC
+  gh.GrubbmGrb_1.2.4TC
+}
+
+Hard {
+  cx.mini.Cigaret_1.31TC
+  jam.micro.RaikoMicro_1.44TC
+  kc.Fortune_1.0
+  pe.SandboxDT_1.91TC
+  simonton.micro.WeeklongObsession_1.5TC
+}

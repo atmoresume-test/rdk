@@ -1,0 +1,57 @@
+final USER_HOME = System.properties['user.home']
+
+allprojects {
+    buildDir = relativePath("${USER_HOME}/builds/rdk-${name}")
+}
+
+task dist(type: Zip, dependsOn: 'generateRdk') {
+
+    archiveName = 'rdk.zip'
+    destinationDir = file(relativePath("${buildDir}"))
+    from { relativePath("${buildDir}/dist") }
+
+}
+
+task copyLibs(dependsOn:  'tools:build') << {
+
+    copy {
+
+        from project(':tools').jar.archivePath
+        from project(':tools').configurations.compile.copy().setTransitive(true)
+        from project(':tools').configurations.groovy.copy().setTransitive(true)
+
+        into relativePath("${buildDir}/dist/libs")
+    }
+
+    copy {
+        from "${projectDir}/challenges"
+        into relativePath("${buildDir}/dist/challenges")
+    }
+
+}
+
+task generateRdk(dependsOn: 'copyLibs') << {
+    generateRdk([ext: '', allParams: '$@', pathSeparator: ':', prefix: '#!/bin/sh\n', currentDir: '\$(dirname \$0)'])
+    generateRdk([ext: '.bat', allParams: '%*', pathSeparator: ';', prefix: '', currentDir: '%~dp1'])
+}
+
+task cleanDist(type: Delete) {
+    delete relativePath("${buildDir}/dist/"), relativePath("${buildDir}/rdk.zip")
+}
+
+task(clean).dependsOn cleanDist
+
+def generateRdk(def osParams) {
+    def destinationDir = file(relativePath("${buildDir}/dist/bin"))
+    if (!destinationDir.exists()) {
+        destinationDir.mkdirs()
+    }
+    def libDir = file(relativePath("${buildDir}/dist/libs"))
+    def classpath = libDir.list().collect {
+        "${osParams.currentDir}/../libs/${it}"
+    }
+
+    def rdkFile = file("${destinationDir}/rdk${osParams.ext}")
+    rdkFile.write "${osParams.prefix}java -cp \"${classpath.join(osParams.pathSeparator)}\" ${osParams.allParams}"
+    rdkFile.setExecutable(true)
+}

@@ -1,0 +1,1 @@
+15 20 * * * cd $RDK_HOME; bin/rdk rrm -d $RDK_HOME/bots -u $USER -p $PASSWORD >> rrm.log 2>&1
