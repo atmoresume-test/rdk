@@ -28,6 +28,11 @@ task copyLibs(dependsOn:  'tools:build') << {
         into relativePath("${buildDir}/dist/challenges")
     }
 
+    copy {
+        from "${projectDir}/scripts"
+        into relativePath("${buildDir}/dist/scripts")
+    }
+
 }
 
 task generateRdk(dependsOn: 'copyLibs') << {

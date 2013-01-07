@@ -1,0 +1,9 @@
+Wave Surfing Challenge
+AVERAGE_ENERGY_CONSERVED
+35 rounds
+
+Wave Surfing Challenge {
+    wiki.challenge.WaveSurfingChallengeBotA 1.0
+    wiki.challenge.WaveSurfingChallengeBotB 1.1
+    wiki.challenge.WaveSurfingChallengeBotC 1.0
+}

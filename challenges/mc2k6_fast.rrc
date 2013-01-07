@@ -1,0 +1,19 @@
+Movement Challenge 2K6 FastLearning
+AVERAGE_ENERGY_CONSERVED
+35 rounds
+
+Wave Surfing Challenge {
+    wiki.challenge.WaveSurfingChallengeBotA 1.0
+    wiki.challenge.WaveSurfingChallengeBotB 1.1
+    wiki.challenge.WaveSurfingChallengeBotC 1.0
+}
+
+Anti Pattern Matching Challenge {
+	cjm.Che 1.2MC
+}
+
+Curve Flattening Challenge {
+    pez.rumble.CassiusClay 1.9996bdMC
+    kawigi.sbf.FloodHT 0.9.2MC
+    abc.tron3.Shadow 3.66MC
+}

@@ -1,0 +1,16 @@
+Targeting Challenge
+AVERAGE_BULLET_DAMAGE
+35 rounds
+
+Reference Bots {
+   pe.SandboxDT 1.91
+   apv.AspidMovement 1.0
+   tzu.TheArtOfWar 1.2TC
+   dummy.micro.Sparrow 2.5TC
+   cx.mini.Cigaret 1.31TC
+   abc.Tron 2.01
+   kawigi.mini.Fhqwhgads 1.1TC
+   wiki.etc.HTTC 1.0
+   emp.Yngwie 1.0
+   kawigi.nano.FunkyChickenTC 1.0
+}

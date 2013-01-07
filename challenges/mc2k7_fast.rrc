@@ -1,0 +1,24 @@
+Movement Challenge 2K7, Fast Learning
+PERCENT_SCORE
+35 rounds
+
+Simple Targeters {
+    wiki.mc2k7.HawkOnFireOS MC2K7, HOF
+    wiki.mc2k7.Splinter MC2K7, SPL
+    wiki.mc2k7.GrubbmGrb MC2K7, GRB
+}
+
+Pattern Matchers {
+	wiki.mc2k7.Waylander MC2K7, WAY
+}
+
+Close Fighters {
+    gh.micro.GrubbmThree 0.9, GR3
+	wiki.mc2k7.RaikoMicro MC2K7, RKM
+}
+
+Top Bots {
+    mue.Ascendant 1.2.27,ASC
+    pez.rumble.CassiusClay 2rho.01NDS, CC
+    cjm.chalk.Chalk 2.5.Al, CHK
+}
